@@ -14,7 +14,7 @@ COPY ./s2i/bin/. ${STI_SCRIPTS_PATH}
 RUN chmod -R a+rx ${STI_SCRIPTS_PATH}
 
 # If we need to add files as part of every SOLR conf, they'd go here
-# COPY ./solr-config/ /tmp/solr-config
+COPY ./solr-config/ /tmp/solr-config
 
 # Give the SOLR directory to root group (not root user)
 # https://docs.openshift.org/latest/creating_images/guidelines.html#openshift-origin-specific-guidelines
